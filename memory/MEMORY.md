@@ -11,6 +11,7 @@ sessions Stella (octobre 2026). Dernière consolidation : **2026-10-11**.
 
 | Chapitre | Fichier | Couvre |
 |---|---|---|
+| Architecture Stella | `stella-architecture.md` | PC, ports, services, cockpit, porte d'entrée, Codex, tri courriels |
 | Personnes | `horizon-personnes.md` | direction, chefs, équipes, clients, donneurs d'ouvrage, fournisseurs, courriels |
 | Plans | `horizon-plans.md` | règles de dessin, cotes, livrables, style de référence |
 | Soumissions | `horizon-soumissions.md` | gabarit, estimation montage, bons de commande |
@@ -27,6 +28,7 @@ Au démarrage, signaler les chapitres en retard (comme le briefing « chefs dus 
 
 | Chapitre | Cadence de révision | Dernière révision |
 |---|---|---|
+| Architecture Stella | 60 j | 2026-10-11 |
 | Personnes | 90 j | 2026-10-11 |
 | Plans | 120 j | 2026-10-11 |
 | Soumissions | 60 j | 2026-10-11 |

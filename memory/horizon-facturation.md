@@ -1,25 +1,30 @@
 # Facturation — Rayonnage Horizon
 
-## Facture hebdo ID-4xx → Alexandre (a.chevrier@operationpc.ca)
+## Facture hebdo ID-4xx → Alexandre (confirmé)
 
-- **35 $/h.**
-- **SANS taxes.**
-- **Copier la dernière facture réelle comme modèle** (skill facture).
-- Numérotation **ID-4xx** (incrémenter à partir de la dernière réelle).
+- **SANS taxes. 35 $/h.** Copier la dernière facture réelle (skill facture).
+- **Base 46 h** = 40 h job + 6 h gestion = **1 610,00 $**. Surplus **additif**.
+  Remboursements à part (ex. **GAZ**).
+- Numérotation : **ID-434 = 1 815,00 $**, **ID-435 = 2 110,00 $**, **prochain = ID-436**.
+- Envoi à **Alexandre** depuis Outlook/Hotmail, **jamais sans GO**.
+- ⚠️ Adresse : les préférences disent **a.chevrier@operationpc.ca** ; les sessions montrent
+  **a.chevrier@rackinghorizon.com** (signature racking.horizon@operationpc.ca).
+  **Confirmer avant d'envoyer** (`a-completer.md`).
 
-## Factures clients Horizon (HRK-F)
+## Factures clients Horizon (HRK-F) — source guide/préf. (pas revu dans les sessions)
 
-- **TPS 5 % + TVQ 9,975 %**, calculées **sur le sous-total**.
-- **Jamais une taxe calculée sur l'autre.**
-- Gabarit = soumission (fond racking, signature Alexandre), voir `horizon-soumissions.md`.
+- **TPS 5 % + TVQ 9,975 %**, calculées **sur le sous-total**. **Jamais une taxe sur l'autre.**
+- Gabarit = soumission (voir `horizon-soumissions.md`). [Confirmer que la série HRK-F est
+  toujours en usage — seule ID-4xx a été vue dans les sessions.]
 
-## Factures Visa → Lyna Fortin
+## Factures Visa → Lyna Fortin — source guide/préf. (pas revu dans les sessions)
 
-- **Trier et classer** selon sa demande.
-- Envoi à **lfortin@gestionjgp.ca** seulement **après GO de Samuel**.
+- Trier/classer selon sa demande. Envoi à **lfortin@gestionjgp.ca** seulement **après GO**.
 
 ## Rappels
 
-- On facture le **total de la feuille de temps** (travail + transport), **jamais le
-  matériel acheté**, **jamais la formation (étoile)**. Voir `horizon-feuilles-temps-rapports.md`.
+- On facture le **total de la feuille** (travail + transport), **jamais le matériel acheté**,
+  **jamais la formation (★)**. Voir `horizon-feuilles-temps-rapports.md`.
+- **Taux paie des chefs ≠ taux de facturation des soumissions.** (Ex. Maxime Adam = 30 $/h
+  de paie ; le taux de montage des soumissions reste `[À COMPLÉTER]`.)
 - Jamais inventer un montant, un taux ou un numéro → `a-completer.md`.

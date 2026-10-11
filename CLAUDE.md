@@ -116,9 +116,18 @@ Si deux lectures sont possibles → **une seule question courte avec les deux op
 
 ---
 
+## Stella (le système)
+
+Stella tourne sur le **PC Windows** de Samuel (`C:\Users\samue`). Interface sur `:8765`,
+assistant « la bulle » sur `:8766`, cockpit Node sur `:4317`, portail collègues sur `:8790`.
+**Codex** = un autre agent de codage qui travaille sur Stella en parallèle — **laisser son
+travail tranquille**, éditer de façon ciblée (Claude = `stella_extras_ui.js`, Codex =
+`stella_operations_ui.js`). Détail complet : `memory/stella-architecture.md`.
+
 ## Index mémoire (`memory/`)
 
 - `MEMORY.md` — index + chapitres à réviser.
+- `stella-architecture.md` — PC, ports, services, cockpit, porte d'entrée Cloudflare, tri courriels.
 - `horizon-personnes.md` — direction, chefs, équipes, clients, donneurs d'ouvrage, fournisseurs, courriels.
 - `horizon-plans.md` — règles de dessin, livrables, style de référence.
 - `horizon-soumissions.md` — gabarit, estimation montage, bons de commande fournisseurs.

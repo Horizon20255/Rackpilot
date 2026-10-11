@@ -33,10 +33,20 @@ brouillon.** Style de référence : **ITC/AREIC, Pedlex, E3**.
 Contrôler le plan contre le **plan client / la photo / le fichier réel**. Vérifier cotes
 et dégagements. Quand Samuel corrige un point → **appliquer la correction partout.**
 
+## Outils de génération (voir `horizon-3d.md`)
+
+- Générateur de plans : `cockpit/outils/visuel-plans/` (`gen-visuel.js`, `_cartouche.js`,
+  `lire-plan.js`…). Schéma **cantilever / porte-à-faux** dans `gen-visuel.js`.
+- Détail des pièces : `horizon-3d-studio/horizon-3d-lib` (`rackfeet.js` = cœur de Rack Plan
+  Studio). THREE **r128 inliné**, viewers autonomes. Vérif « conforme (**tolérance 1/16 po**) ».
+- [`job-analyzer` cité dans le guide, pas retrouvé dans les sessions → `a-completer.md`.]
+
 ## Dessin de pièces (fabrication)
 
 Pour un cadre de palettier soudé ou une pièce de fabrication (ex. **RH-ECH-4214**),
-produire les **dessins d'atelier** avec cotes complètes.
+produire les **dessins d'atelier** avec cotes complètes. Les dessins de pièces physiques
+(session « Retravail des objets ») = PDF **reportlab**, couleurs de marque, réf. Pedlex /
+Konstant / Ridg-U-Rak / Damotech / Uline, Guide CSST.
 
 ## Normes & formation
 
