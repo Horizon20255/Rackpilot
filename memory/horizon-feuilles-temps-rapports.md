@@ -1,3 +1,13 @@
+---
+name: horizon-feuilles-temps-rapports
+description: Feuilles de temps & rapports de chantier
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Feuilles de temps & rapports de chantier — Rayonnage Horizon
 
 ## Feuilles de temps
@@ -35,7 +45,8 @@
 
 ## Courriels Outlook web (s.moreau@rackinghorizon.com) — RECETTE SANS ÉCRASEMENT
 
-> Détail aussi dans la mémoire opérationnelle de Stella : `brouillons-outlook-recette-sans-ecrasement.md`.
+> Détail dans tes fiches Stella : [[brouillons-outlook-recette-sans-ecrasement]],
+> [[feuille-de-temps-du-chef]], [[feuille-de-temps-generateur]].
 
 - **Aucun envoi sans brouillon montré + GO.** Vérifier les **Éléments envoyés** d'abord :
   jamais une 2e copie au même destinataire sauf relance assumée.
@@ -64,4 +75,4 @@
 - **Terra Plus** (Marco).
 - **Annexair** — C-22978.
 
-[Liste officielle des jobs NS-26-XXX en cours → confirmer avec l'horaire, voir `a-completer.md`.]
+[Liste officielle des jobs NS-26-XXX en cours → confirmer avec l'horaire, voir [[a-completer]].]

@@ -1,7 +1,17 @@
+---
+name: horizon-plans
+description: Règles de dessin des plans de rayonnage, livrables, style de référence
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Plans de rayonnage — la manière de Samuel
 
 **Toujours partir des outils de Samuel** : skill plans, Rack Plan Studio, job-analyzer,
-bibliothèque 3D, repo `horizon-3d-studio` (voir `horizon-3d.md`). **Jamais un croquis
+bibliothèque 3D, repo `horizon-3d-studio` (voir [[horizon-3d]]). **Jamais un croquis
 brouillon.** Style de référence : **ITC/AREIC, Pedlex, E3**.
 
 ## Règles de dessin (perfection au millimètre)
@@ -33,13 +43,13 @@ brouillon.** Style de référence : **ITC/AREIC, Pedlex, E3**.
 Contrôler le plan contre le **plan client / la photo / le fichier réel**. Vérifier cotes
 et dégagements. Quand Samuel corrige un point → **appliquer la correction partout.**
 
-## Outils de génération (voir `horizon-3d.md`)
+## Outils de génération (voir [[horizon-3d]])
 
 - Générateur de plans : `cockpit/outils/visuel-plans/` (`gen-visuel.js`, `_cartouche.js`,
   `lire-plan.js`…). Schéma **cantilever / porte-à-faux** dans `gen-visuel.js`.
 - Détail des pièces : `horizon-3d-studio/horizon-3d-lib` (`rackfeet.js` = cœur de Rack Plan
   Studio). THREE **r128 inliné**, viewers autonomes. Vérif « conforme (**tolérance 1/16 po**) ».
-- [`job-analyzer` cité dans le guide, pas retrouvé dans les sessions → `a-completer.md`.]
+- [`job-analyzer` cité dans le guide, pas retrouvé dans les sessions → [[a-completer]].]
 
 ## Dessin de pièces (fabrication)
 

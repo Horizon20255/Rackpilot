@@ -1,3 +1,13 @@
+---
+name: horizon-prospection-marketing
+description: Prospection Instantly & marketing Horizon
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Prospection & marketing — Rayonnage Horizon
 
 ## Prospection (Instantly — compte de prospection, séparé d'Horizon)
@@ -14,12 +24,12 @@
   **lecture seule** (User-Agent custom obligatoire).
 - **Leads chauds → transférés à Stéphane Fontaine.**
 - Compte d'envoi = boîtes DFY Instantly (SMTP). [Le « Gmail de prospection » et **Apollo**
-  sont dans le guide/préf. mais **pas retrouvés** dans les sessions → `a-completer.md`.]
+  sont dans le guide/préf. mais **pas retrouvés** dans les sessions → [[a-completer]].]
 
 ## Courriels d'équipe & clients
 
 - **Outlook, s.moreau@rackinghorizon.com, après brouillon montré + GO.** Recette sans
-  écrasement : voir `horizon-feuilles-temps-rapports.md`.
+  écrasement : voir [[horizon-feuilles-temps-rapports]].
 - Courriel que Samuel doit écrire lui-même : **brouillon seulement**, il envoie.
 
 ## Marketing & vidéo
@@ -27,7 +37,7 @@
 - Page **« Média »** LIVE dans Stella (cockpit local `127.0.0.1:8765`) : toutes les pubs
   groupées par jour, bouton **« Publier »** branché sur **Postiz** (plugin `postiz@…`,
   4 réseaux **FB / IG / TikTok / LinkedIn** — **comptes pas encore connectés**).
-- **Pipeline auto** (`pipeline-pub-auto-postiz.md`) : photos chantier (photographe
+- **Pipeline auto** ([[pipeline-pub-auto-postiz]]) : photos chantier (photographe
   **Tristan**) → **Canva** → brouillon → **GO 1 tap** → Postiz. **Mode auto + GO, jamais
   full-auto.** Moteur vidéo = **Real-ESRGAN + ffmpeg**, vidéos 4K. [« Seedance 2.0 » et
   « Playwright » du guide/préf. **non retrouvés** ; « Tristan Labbé / caméraman » non confirmé.]
@@ -44,3 +54,8 @@
 
 Surveiller ConstructConnect, MERX, SEAO, BuildingConnected, PlanHub. **Présenter à Samuel ;
 jamais soumettre sans son GO.**
+
+## Fiches Stella liées
+
+[[jamais-nom-client-public]] · [[posts-angle-editorial-horizon]] · [[videos-toujours-4k]] ·
+[[sociaux-reconnexion]] · [[regle-interne-auto-sortie-go]] · [[stella-page-dossiers-clients]].

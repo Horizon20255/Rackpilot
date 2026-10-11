@@ -1,3 +1,13 @@
+---
+name: a-completer
+description: À compléter / à trancher — questions pour Samuel
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # À COMPLÉTER / À TRANCHER — à demander à Samuel
 
 **Ne jamais inventer.** Demander, puis déplacer dans le bon chapitre une fois confirmé.
@@ -36,7 +46,7 @@
 ## Opérations
 
 - [ ] **Liste officielle des jobs NS-26-XXX** en cours (jobs vus listés dans
-      `horizon-feuilles-temps-rapports.md`, à confirmer actifs).
+      [[horizon-feuilles-temps-rapports]], à confirmer actifs).
 - [ ] **Qui est dans quelle équipe** (chefs + membres).
 - [ ] `job-analyzer` (cité au guide) : existe-t-il ? où ?
 - [ ] Chariot Raymond 7500-R45TT : **allée min 108 po** à confirmer.
@@ -47,13 +57,13 @@
 - [x] Repo 3D : `horizon-3d-studio/horizon-3d-lib` (lib H3D) + générateur de plans dans
       `cockpit/outils/visuel-plans`.
 - [x] Où vit Stella : **PC Windows**, `C:\Users\samue\...`. Mémoire dans
-      `C:\Users\samue\.claude\projects\...\memory\`. Voir `stella-architecture.md`.
+      `C:\Users\samue\.claude\projects\...\memory\`. Voir [[stella-architecture]].
 - [ ] **Format mémoire à harmoniser** : les fiches réelles de Stella ont **frontmatter YAML
       + liens `[[...]]`** ; cette base est en markdown simple. Je convertis au format Stella ?
 - [ ] **Comment synchroniser** cette base `memory/` dans le `memory\` réel du PC (d'ici,
       cloud, je n'y accède pas).
 - [ ] **Porte d'entrée Cloudflare** : attend ton GO (domaine `stella-horizon.com` à acheter
-      + compte Cloudflare = tes 15 min). Voir `stella-architecture.md`.
+      + compte Cloudflare = tes 15 min). Voir [[stella-architecture]].
 
 ## Projet web (claude.ai)
 

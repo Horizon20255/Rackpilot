@@ -1,6 +1,16 @@
+---
+name: horizon-personnes
+description: Personnes & contacts Rayonnage Horizon
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Personnes & contacts — Rayonnage Horizon
 
-> Courriels : écrire **exactement** comme ici. Manquant → `a-completer.md`, ne jamais
+> Courriels : écrire **exactement** comme ici. Manquant → [[a-completer]], ne jamais
 > deviner. Légende : **(confirmé)** = vu dans les sessions ; **(guide/préf.)** = fourni par
 > Samuel mais pas revu dans les sessions.
 
@@ -12,7 +22,7 @@
   cell **(819) 696-8820**, signature **racking.horizon@operationpc.ca**. ⚠️ Les préférences
   disent d'envoyer la **facture hebdo ID-4xx** à **a.chevrier@operationpc.ca** — adresse non
   revue telle quelle dans les sessions. **Vérifier la bonne adresse avant d'envoyer**
-  (`a-completer.md`). Autres compagnies : **Dalexe**, **operationpc.ca**.
+  ([[a-completer]]). Autres compagnies : **Dalexe**, **operationpc.ca**.
 - **Stéphane Fontaine** — ventes, **interne-clé**. **s.fontaine@rackinghorizon.com**,
   **450-374-5939**. Reçoit les **leads chauds** de prospection **et** les **dossiers RH**
   (embauches). Chiffre et envoie les soumissions de campagne au client ; Samuel lui fournit

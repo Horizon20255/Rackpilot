@@ -1,3 +1,13 @@
+---
+name: horizon-soumissions
+description: Soumissions & bons de commande Horizon
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Soumissions & bons de commande — Rayonnage Horizon
 
 ## Gabarit de soumission (confirmé, modèle = « soumission Instukem rév. 2 »)
@@ -23,7 +33,7 @@ Chevrier P.D.G.**
 **Outil = widget d'estimation** (formules confirmées) :
 `M-O = installateurs × jours × h/jour × taux` ; `total = (M-O + forfaits) × (1 + marge %)` ;
 durée = `pièces / cadence`. **Défauts du widget : 8 h/jour, marge 0 %.**
-**Taux horaire et cadence NON fixés** → saisis par Samuel. Ne jamais deviner (`a-completer.md`).
+**Taux horaire et cadence NON fixés** → saisis par Samuel. Ne jamais deviner ([[a-completer]]).
 
 Règles de Samuel (guide/préf., à garder) : **3 gars/équipe** ; **10 h/jour** si on couche
 dehors ; **8 h + transport** si local ; **> 2 h de route = hébergement** ; **petite marge**,

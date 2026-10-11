@@ -1,3 +1,13 @@
+---
+name: stella-architecture
+description: Architecture de Stella : PC, ports, services, cockpit, porte d'entrée, Codex, tri courriels
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Architecture de Stella (système perso de Samuel)
 
 > Reconstruit depuis le tri des sessions (oct. 2026). Stella vit sur **UN PC Windows**
@@ -26,8 +36,8 @@
 
 **Codex** = agent de codage séparé qui travaille sur Stella en parallèle (style, UI
 opérations). **Laisser son travail tranquille, éditer de façon ciblée.** Claude touche
-`stella_extras_ui.js`, Codex touche `stella_operations_ui.js`. Coordination via la mémoire
-`coordination-claude-codex.md`.
+`stella_extras_ui.js`, Codex touche `stella_operations_ui.js`. Coordination via la fiche
+[[coordination-claude-codex]].
 
 ## Accès distant — « la porte d'entrée »
 
@@ -63,11 +73,12 @@ suspendu/402 au test ; ~35 routes), `horizon-app-horaire`, `horizon-ai-site`,
 
 - **Fiches `.md`** avec **frontmatter YAML + liens `[[...]]`**, dans
   `C:\Users\samue\.claude\projects\...\memory\`.
-- Fiches vues : `ronde-courriels-30min`, `stella-mon-espace-employes`,
-  `site-racking-horizon-deploiement`, `stella-extras-ui`, `coordination-claude-codex`,
-  `brouillons-outlook-recette-sans-ecrasement`, etc.
+- Fiches vues : [[ronde-courriels-30min]], [[stella-mon-espace-employes]],
+  [[site-racking-horizon-deploiement]], [[stella-extras-ui]], [[coordination-claude-codex]],
+  [[gardien-services-et-quota-n8n]], [[brouillons-outlook-recette-sans-ecrasement]],
+  [[mac-migration-username-change]], etc.
 - ⚠️ Format à harmoniser : la présente base `memory/` est en markdown simple ; les fiches
-  réelles de Stella ont du frontmatter YAML + wikilinks → voir `a-completer.md`.
+  réelles de Stella ont du frontmatter YAML + wikilinks → voir [[a-completer]].
 
 ## Identité de marque
 

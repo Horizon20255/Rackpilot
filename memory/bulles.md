@@ -1,3 +1,13 @@
+---
+name: bulles
+description: Bulles & domaines séparés d'Horizon
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Bulles & domaines — jamais mélangés avec Horizon
 
 > **Par défaut, toute demande = Rayonnage Horizon.** Si ça touche un autre domaine ou le
@@ -12,7 +22,7 @@ dossiers de `dev\`** sur le PC :
 · `rocheleau-cogan` · `claude-setup`.
 
 **« la bulle »** = l'**assistant de Stella** (service sur le port **8766**), pas un domaine
-d'affaires. Voir `stella-architecture.md`.
+d'affaires. Voir [[stella-architecture]].
 
 ## Domaines hors rayonnage
 

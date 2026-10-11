@@ -1,3 +1,13 @@
+---
+name: horizon-3d
+description: Moteur 3D, générateur de plans & catalogue de pièces
+metadata:
+  node_type: memory
+  type: project
+  originSessionId: session_01WJVxmCph7uBKyUiWE2K94Q
+  modified: 2026-10-11
+---
+
 # Moteur 3D, générateur de plans & catalogue — Rayonnage Horizon
 
 **Toujours partir des outils de Samuel. Ne pas réinventer.** THREE **r128 INLINÉ**, jamais
@@ -27,7 +37,7 @@ Sécurité au sol · Charges · Accessoires de levage · Chariots.
 - Porte-à-faux : **Cogan 561001** (artefact « Porte-à-faux Cogan 561001 »).
 - Cadre/échelle de fabrication : **RH-ECH-4214** (exemple du guide ; dessins d'atelier cotés).
 - [Détail complet des 77 pièces + table de charge poutres **CL** : vit dans `catalog.html` /
-  `INVENTAIRE-3D.html` du système réel ; CL non retrouvée dans les sessions → `a-completer.md`.]
+  `INVENTAIRE-3D.html` du système réel ; CL non retrouvée dans les sessions → [[a-completer]].]
 
 ## Qualité des viewers
 
@@ -49,5 +59,5 @@ rien ne traverse les montants ni les poutres.
 - Autres jobs dômes vus : NS-26-991 (conteneurs), NS-26-124 (Favreau), NS-25-688 (Ultratec).
 
 > Les **règles de dessin de palettier** (cotes mur→rack, 8", montants 3", clairance vs
-> entraxe, lisses 8'/12', légende, A/B/C, barres de sécurité) sont dans `horizon-plans.md`
+> entraxe, lisses 8'/12', légende, A/B/C, barres de sécurité) sont dans [[horizon-plans]]
 > (source : guide/préf. ; pas revues dans les sessions dômes minées).

@@ -2,12 +2,12 @@
 
 Ce fichier est chargé à chaque session. Il dit **qui est Samuel, comment travailler avec
 lui, et les règles qui ne se brisent jamais**. Le détail par domaine est dans `memory/`
-(voir l'index `memory/MEMORY.md`). **Consulte la mémoire avant chaque tâche** et retiens
+(voir l'index [[MEMORY]]). **Consulte la mémoire avant chaque tâche** et retiens
 ce qui est durable (préférences, prix confirmés, contacts, décisions).
 
 > Par défaut, **toute demande concerne Rayonnage Horizon**. Si ça touche une autre bulle
 > (Dalexe, Horizon AI, Story Studio, Sentinelle ÉPI, Saint-Laurent, perso), voir
-> `memory/bulles.md` et demander avant de répondre si c'est ambigu.
+> [[bulles]] et demander avant de répondre si c'est ambigu.
 
 ---
 
@@ -100,12 +100,12 @@ Si deux lectures sont possibles → **une seule question courte avec les deux op
   même destinataire, sauf relance assumée.
 - **Jamais inventer** un prix, une quantité, un contact, une date, un numéro de PO, un taux
   horaire ou une marge. Manquant → **demande ou écris `[À COMPLÉTER]`**. Voir
-  `memory/a-completer.md`.
+  [[a-completer]].
 - **Dates toujours absolues** (ex. 2026-09-15).
 - **Horizon n'est PAS titulaire RBQ. Ne jamais l'écrire.**
 - **Factures hebdo ID-4xx** (35 $/h, à a.chevrier@operationpc.ca) : **SANS taxes**, copier
   la dernière facture. **Factures clients Horizon (HRK-F)** : TPS 5 % + TVQ 9,975 % sur le
-  **sous-total**, jamais une taxe sur l'autre. Voir `memory/horizon-facturation.md`.
+  **sous-total**, jamais une taxe sur l'autre. Voir [[horizon-facturation]].
 - **Contenu public** : jamais de nom de client, jamais de visage, jamais de promesse de
   temps. **Jamais d'attaque sur Équipements E3 ou Konstant** (ce sont des donneurs
   d'ouvrage). Prix de Gilles et stratégie de prix = **interne seulement**.
@@ -122,18 +122,18 @@ Stella tourne sur le **PC Windows** de Samuel (`C:\Users\samue`). Interface sur 
 assistant « la bulle » sur `:8766`, cockpit Node sur `:4317`, portail collègues sur `:8790`.
 **Codex** = un autre agent de codage qui travaille sur Stella en parallèle — **laisser son
 travail tranquille**, éditer de façon ciblée (Claude = `stella_extras_ui.js`, Codex =
-`stella_operations_ui.js`). Détail complet : `memory/stella-architecture.md`.
+`stella_operations_ui.js`). Détail complet : [[stella-architecture]].
 
 ## Index mémoire (`memory/`)
 
-- `MEMORY.md` — index + chapitres à réviser.
-- `stella-architecture.md` — PC, ports, services, cockpit, porte d'entrée Cloudflare, tri courriels.
-- `horizon-personnes.md` — direction, chefs, équipes, clients, donneurs d'ouvrage, fournisseurs, courriels.
-- `horizon-plans.md` — règles de dessin, livrables, style de référence.
-- `horizon-soumissions.md` — gabarit, estimation montage, bons de commande fournisseurs.
-- `horizon-facturation.md` — ID-4xx, HRK-F, taxes, Visa.
-- `horizon-feuilles-temps-rapports.md` — feuilles de temps, rapports de chantier.
-- `horizon-3d.md` — moteur 3D, viewers, Rack Plan Studio, catalogue de pièces.
-- `horizon-prospection-marketing.md` — Instantly, Apollo, contenu public, vidéo.
-- `bulles.md` — Dalexe, Horizon AI, Story Studio, Sentinelle ÉPI, Saint-Laurent, perso.
-- `a-completer.md` — tout ce qui manque et qu'il faut demander à Samuel.
+- [[MEMORY]] — index + chapitres à réviser.
+- [[stella-architecture]] — PC, ports, services, cockpit, porte d'entrée Cloudflare, tri courriels.
+- [[horizon-personnes]] — direction, chefs, équipes, clients, donneurs d'ouvrage, fournisseurs, courriels.
+- [[horizon-plans]] — règles de dessin, livrables, style de référence.
+- [[horizon-soumissions]] — gabarit, estimation montage, bons de commande fournisseurs.
+- [[horizon-facturation]] — ID-4xx, HRK-F, taxes, Visa.
+- [[horizon-feuilles-temps-rapports]] — feuilles de temps, rapports de chantier.
+- [[horizon-3d]] — moteur 3D, viewers, Rack Plan Studio, catalogue de pièces.
+- [[horizon-prospection-marketing]] — Instantly, Apollo, contenu public, vidéo.
+- [[bulles]] — Dalexe, Horizon AI, Story Studio, Sentinelle ÉPI, Saint-Laurent, perso.
+- [[a-completer]] — tout ce qui manque et qu'il faut demander à Samuel.
