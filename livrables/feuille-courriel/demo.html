@@ -1,0 +1,319 @@
+<title>Feuille → Courriel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+  /* Layout : deux colonnes (feuille à gauche, brouillon à droite) qui s'empilent sous 760px. */
+  :root {
+    --navy: #0f2a4a;
+    --gold: #c9a227;
+    --bg: #f3f1ea;
+    --surface: #ffffff;
+    --ink: #16232f;
+    --muted: #5d6b78;
+    --line: #d9d4c7;
+    --ok: #2f7d4f;
+    --font-display: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
+    --font-body: "Public Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --navy: #d7e4f4;
+      --gold: #d9b64a;
+      --bg: #0c1722;
+      --surface: #14222f;
+      --ink: #e7edf3;
+      --muted: #9aacbb;
+      --line: #27394a;
+      --ok: #6cc08a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --navy: #d7e4f4;
+    --gold: #d9b64a;
+    --bg: #0c1722;
+    --surface: #14222f;
+    --ink: #e7edf3;
+    --muted: #9aacbb;
+    --line: #27394a;
+    --ok: #6cc08a;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--font-body); line-height: 1.5; }
+  .wrap {
+    max-width: 1060px; margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 22px 40px;
+  }
+
+  header.top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .mark { width: 10px; height: 34px; background: var(--gold); border-radius: 2px; flex: none; }
+  h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 1.1rem + 2vw, 2.1rem);
+       letter-spacing: .01em; margin: 0; color: var(--navy); text-wrap: balance; }
+  .sub { color: var(--muted); margin: 8px 0 0; max-width: 62ch; }
+  .sub b { color: var(--ink); }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 22px; align-items: start; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 16px 18px;
+          min-width: 0; }
+  .card h2 { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .06em;
+             font-size: .82rem; color: var(--gold); margin: 0 0 14px; }
+
+  label { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em;
+          color: var(--muted); margin: 0 0 4px; }
+  input, select { width: 100%; font: inherit; color: var(--ink); background: var(--bg);
+                  border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+  input:focus, select:focus { outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold); }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .field { margin-bottom: 12px; }
+
+  table.emp { width: 100%; border-collapse: collapse; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  table.emp th { font-size: .66rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted);
+                 text-align: left; padding: 4px 6px; font-weight: 600; }
+  table.emp td { padding: 3px 6px; border-top: 1px solid var(--line); }
+  table.emp input[type="text"] { padding: 6px 8px; }
+  table.emp input.num { padding: 6px 8px; text-align: right; }
+  table.emp input[type="checkbox"] { width: auto; accent-color: var(--gold); }
+  .colh { width: 70px; } .colc { width: 44px; text-align: center; }
+  .hint { font-size: .72rem; color: var(--muted); margin-top: 8px; }
+
+  /* Aperçu du courriel */
+  .mail { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .mail .head { padding: 10px 12px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--navy) 6%, var(--surface)); }
+  .ln { display: grid; grid-template-columns: 54px 1fr; gap: 8px; font-size: .86rem; padding: 2px 0; }
+  .ln span.k { color: var(--muted); text-transform: uppercase; font-size: .68rem; letter-spacing: .05em; padding-top: 3px; }
+  .ln span.v { word-break: break-word; }
+  .ln span.v.todo { color: #b4601c; }
+  .mail .body { padding: 12px; white-space: pre-wrap; font-size: .9rem; min-height: 180px; }
+
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  button.cta { font: inherit; font-weight: 600; cursor: pointer; border-radius: 9px; padding: 11px 16px; border: 1px solid transparent; }
+  button.primary { background: var(--navy); color: var(--bg); }
+  :root:not([data-theme="light"]) button.primary, :root[data-theme="dark"] button.primary { color: #0c1722; }
+  @media (prefers-color-scheme: light) { button.primary { color: #fff; } }
+  button.primary:hover { background: color-mix(in srgb, var(--navy) 84%, #000); }
+  button.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  button.ghost:hover { border-color: var(--gold); }
+  button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  .note { font-size: .74rem; color: var(--muted); margin-top: 10px; }
+  .toast { color: var(--ok); font-size: .8rem; font-weight: 600; margin-top: 8px; min-height: 1em; }
+
+  details.code { margin-top: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 4px 16px; }
+  details.code summary { cursor: pointer; font-family: var(--font-display); text-transform: uppercase; letter-spacing: .05em;
+                         color: var(--gold); font-size: .82rem; padding: 12px 0; }
+  details.code pre { overflow-x: auto; background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+                     padding: 12px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .78rem; line-height: 1.5; }
+  .deco { font-size: .72rem; color: var(--muted); margin-top: 26px; border-top: 1px solid var(--line); padding-top: 12px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="mark" aria-hidden="true"></span>
+    <h1>Feuille de temps → Courriel</h1>
+  </header>
+  <p class="sub">Le bouton <b>✉ Courriel</b> à côté d'une feuille. Tu cliques, ton <b>brouillon Outlook s'ouvre pré-rempli</b> (objet, corps, CC). <b>Rien ne part</b> — c'est toi qui envoies. Les données ci-dessous sont un <b>exemple à remplacer</b>.</p>
+
+  <div class="grid">
+    <!-- COLONNE FEUILLE -->
+    <section class="card" aria-label="Feuille de temps">
+      <h2>La feuille</h2>
+      <div class="field">
+        <label for="client">Client / Job</label>
+        <input id="client" type="text" value="NS-26-401 — Palmarolle">
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="semaine">Semaine du</label>
+          <input id="semaine" type="date" value="2026-10-12">
+        </div>
+        <div class="field">
+          <label for="chef">Chef d'équipe</label>
+          <input id="chef" type="text" value="Maxime Adam">
+        </div>
+      </div>
+
+      <label>Employés — heures (★ = formation, non facturée)</label>
+      <table class="emp" id="emp">
+        <thead>
+          <tr><th>Nom</th><th class="colh">Travail</th><th class="colh">Déplac.</th><th class="colc">★</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" class="nom" value="Maxime Adam"></td>
+            <td><input type="number" class="num travail" min="0" step="0.5" value="40"></td>
+            <td><input type="number" class="num deplacement" min="0" step="0.5" value="6"></td>
+            <td class="colc"><input type="checkbox" class="formation"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="nom" value="Vincent Lebrun"></td>
+            <td><input type="number" class="num travail" min="0" step="0.5" value="38"></td>
+            <td><input type="number" class="num deplacement" min="0" step="0.5" value="6"></td>
+            <td class="colc"><input type="checkbox" class="formation"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="nom" value="Recrue"></td>
+            <td><input type="number" class="num travail" min="0" step="0.5" value="8"></td>
+            <td><input type="number" class="num deplacement" min="0" step="0.5" value="0"></td>
+            <td class="colc"><input type="checkbox" class="formation" checked></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row2" style="margin-top:14px">
+        <div class="field">
+          <label for="to">Destinataire</label>
+          <select id="to">
+            <option value="">— choisir (à confirmer) —</option>
+            <option value="lfortin@gestionjgp.ca">Lyna Fortin — compta</option>
+            <option value="a.chevrier@operationpc.ca">Alexandre Chevrier</option>
+            <option value="logistiques@rackinghorizon.com">Logistiques</option>
+            <option value="horaire@rackinghorizon.com">Horaire</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cc">CC</label>
+          <input id="cc" type="text" value="logistiques@rackinghorizon.com">
+        </div>
+      </div>
+    </section>
+
+    <!-- COLONNE BROUILLON -->
+    <section class="card" aria-label="Brouillon de courriel">
+      <h2>Le brouillon</h2>
+      <div class="mail">
+        <div class="head">
+          <div class="ln"><span class="k">À</span><span class="v" id="pvTo"></span></div>
+          <div class="ln"><span class="k">CC</span><span class="v" id="pvCc"></span></div>
+          <div class="ln"><span class="k">Objet</span><span class="v" id="pvSujet"></span></div>
+        </div>
+        <div class="body" id="pvBody"></div>
+      </div>
+
+      <div class="actions">
+        <button class="cta primary" id="btnOutlook">✉ Ouvrir le brouillon Outlook</button>
+        <button class="cta ghost" id="btnMailto">Appli mail par défaut</button>
+        <button class="cta ghost" id="btnCopy">Copier le texte</button>
+      </div>
+      <div class="toast" id="toast" role="status"></div>
+      <p class="note">⚠️ Un lien courriel ne peut pas attacher le PDF tout seul — tu glisses la feuille de temps dans le brouillon avant d'envoyer. Rien n'est envoyé automatiquement.</p>
+    </section>
+  </div>
+
+  <details class="code">
+    <summary>Le code à greffer dans Stella (page /feuille)</summary>
+    <p class="hint">Fichier <code>stella-feuille-courriel.js</code> (branche <code>claude/zealous-pascal-leyjkd</code>). On pose le bouton à côté de chaque feuille validée :</p>
+    <pre id="snippet"></pre>
+  </details>
+
+  <p class="deco">Rayonnage Horizon — démo interne. Navy #0f2a4a · Gold #c9a227.</p>
+</div>
+
+<script>
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+
+  function fmtHeures(n) {
+    var v = Math.round((Number(n) || 0) * 2) / 2;
+    return Number.isInteger(v) ? String(v) : v.toFixed(1);
+  }
+  function lireFeuille() {
+    var lignes = Array.prototype.map.call(document.querySelectorAll('#emp tbody tr'), function (tr) {
+      return {
+        nom: tr.querySelector('.nom').value.trim(),
+        travail: parseFloat(tr.querySelector('.travail').value) || 0,
+        deplacement: parseFloat(tr.querySelector('.deplacement').value) || 0,
+        formation: tr.querySelector('.formation').checked
+      };
+    });
+    return { client: $('client').value.trim(), semaine: $('semaine').value, chef: $('chef').value.trim(), lignes: lignes };
+  }
+  function totalFacturable(f) {
+    return f.lignes.reduce(function (t, l) { return l.formation ? t : t + l.travail + l.deplacement; }, 0);
+  }
+  function construireSujet(f) {
+    var client = f.client || '[À COMPLÉTER — client/job]';
+    var sem = f.semaine ? 'semaine du ' + f.semaine : '[semaine À COMPLÉTER]';
+    return 'Feuille de temps — ' + client + ' — ' + sem;
+  }
+  function construireCorps(f) {
+    var client = f.client || '[À COMPLÉTER — client/job]';
+    var sem = f.semaine || '[À COMPLÉTER]';
+    var chef = f.chef || '[équipe À COMPLÉTER]';
+    var lignes = f.lignes.map(function (l) {
+      var h = fmtHeures(l.travail + l.deplacement);
+      return '  • ' + (l.nom || '[nom]') + ' : ' + h + ' h' + (l.formation ? '  (★ formation — non facturée)' : '');
+    }).join('\n');
+    return ['Bonjour,', '',
+      'Feuille de temps — ' + client + ', semaine du ' + sem + '.',
+      'Équipe : ' + chef + '.', '', lignes, '',
+      'Total facturable : ' + fmtHeures(totalFacturable(f)) + ' h (travail + déplacement). Formation (★) non facturée.',
+      '', 'Feuille de temps en pièce jointe (PDF).', '', 'Merci,', 'Samuel — Rayonnage Horizon'].join('\n');
+  }
+  function qs(obj) {
+    return Object.keys(obj).filter(function (k) { return obj[k] != null && obj[k] !== ''; })
+      .map(function (k) { return k + '=' + encodeURIComponent(obj[k]); }).join('&');
+  }
+  function lienOutlook(f, o) {
+    return 'https://outlook.office.com/mail/deeplink/compose?' + qs({ to: o.to, cc: o.cc, subject: construireSujet(f), body: construireCorps(f) });
+  }
+  function lienMailto(f, o) {
+    return 'mailto:' + (o.to || '') + '?' + qs({ cc: o.cc, subject: construireSujet(f), body: construireCorps(f) });
+  }
+
+  function opts() { return { to: $('to').value, cc: $('cc').value.trim() }; }
+
+  function render() {
+    var f = lireFeuille(), o = opts();
+    var toEl = $('pvTo');
+    if (o.to) { toEl.textContent = o.to; toEl.classList.remove('todo'); }
+    else { toEl.textContent = '[À COMPLÉTER — choisir le destinataire]'; toEl.classList.add('todo'); }
+    $('pvCc').textContent = o.cc || '—';
+    $('pvSujet').textContent = construireSujet(f);
+    $('pvBody').textContent = construireCorps(f);
+  }
+
+  function flash(msg) { var t = $('toast'); t.textContent = msg; setTimeout(function () { if (t.textContent === msg) t.textContent = ''; }, 2600); }
+
+  document.addEventListener('input', render);
+  document.addEventListener('change', render);
+
+  $('btnOutlook').addEventListener('click', function () {
+    var f = lireFeuille(), o = opts();
+    window.open(lienOutlook(f, o), '_blank', 'noopener');
+    flash('Brouillon Outlook ouvert dans un nouvel onglet.');
+  });
+  $('btnMailto').addEventListener('click', function () {
+    var f = lireFeuille(), o = opts();
+    window.location.href = lienMailto(f, o);
+  });
+  $('btnCopy').addEventListener('click', function () {
+    var f = lireFeuille();
+    var txt = 'Objet : ' + construireSujet(f) + '\n\n' + construireCorps(f);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(function () { flash('Texte copié.'); }, function () { selectBody(); });
+    } else { selectBody(); }
+  });
+  function selectBody() {
+    var r = document.createRange(); r.selectNodeContents($('pvBody'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); flash('Sélectionné — Ctrl+C pour copier.');
+  }
+
+  $('snippet').textContent =
+    "// stella_extras_ui.js — page /feuille\n" +
+    "// Pose le bouton ✉ à côté d'une feuille validée.\n" +
+    "const btn = FeuilleCourriel.creerBouton(\n" +
+    "  () => feuilleCourante(),                 // ta feuille : {client, semaine, chef, lignes:[...]}\n" +
+    "  { to: '', cc: 'logistiques@rackinghorizon.com' }  // destinataire à confirmer\n" +
+    ");\n" +
+    "ligneFeuille.appendChild(btn);\n\n" +
+    "// Ou directement :\n" +
+    "FeuilleCourriel.ouvrirBrouillon(feuille, { to, cc });";
+
+  render();
+</script>
