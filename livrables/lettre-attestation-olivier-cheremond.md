@@ -10,7 +10,7 @@ Le 4 novembre 2026
 
 Je soussigné, **Samuel Gilbert-Moreau**, coordonnateur chez **Rayonnage Horizon inc.**, atteste par la présente que **M. Olivier Cheremond** occupe un poste de **chef d'équipe d'installation** au sein de notre entreprise.
 
-Le **samedi 24 octobre 2026**, M. Cheremond était affecté et présent au travail **en avant-midi**, sur un chantier de démontage de rayonnage dans la région de Montréal. Sa présence ce matin-là était requise et essentielle : à titre de chef d'équipe, il dirigeait les travaux sur place, et nous avions absolument besoin de lui pour assurer la bonne marche du chantier.
+Le **samedi 24 octobre 2026**, M. Cheremond était affecté et présent au travail **de 6 h à 17 h**, sur un chantier de démontage de rayonnage (projet RebelRack – Deslauriers), dans la région de Montréal. Sa présence ce jour-là était requise et essentielle : à titre de chef d'équipe, il dirigeait les travaux sur place, et nous avions absolument besoin de lui pour assurer la bonne marche du chantier.
 
 C'est en raison de ces obligations professionnelles que M. Cheremond n'a pu se présenter à **[sa signature / son enregistrement]** prévu ce même jour.
 
@@ -28,4 +28,4 @@ s.moreau@rackinghorizon.com
 Tél. : [à compléter]
 
 ---
-*À confirmer avant de la remettre : le libellé « signature / enregistrement » et ton numéro de téléphone. Olivier a travaillé en avant-midi le 24 oct — attestation faite sur ta connaissance directe comme coordonnateur, aucune feuille de temps n'a besoin d'être produite ni fabriquée. Document privé pour la cour.*
+*À remplir : ton numéro de téléphone (ligne prévue). Attestation signée par toi comme coordonnateur, sur ta connaissance directe des heures (6 h–17 h, 24 oct). Document privé pour la cour — aucune feuille de temps fabriquée.*
