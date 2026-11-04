@@ -25,7 +25,7 @@ _______________________________
 **Samuel Gilbert-Moreau**
 Coordonnateur — Rayonnage Horizon inc.
 s.moreau@rackinghorizon.com
-Tél. : [à compléter]
+Tél. : 873 664-3383
 
 ---
 *À remplir : ton numéro de téléphone (ligne prévue). Attestation signée par toi comme coordonnateur, sur ta connaissance directe des heures (6 h–17 h, 24 oct). Document privé pour la cour — aucune feuille de temps fabriquée.*
